@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import Gallery from '../components/Gallery';
+import HeroSection from '../components/HeroSection';
+
 
 function Services() {
   return (
@@ -10,6 +12,7 @@ function Services() {
     >
       <h1>Welcome to Our Company</h1>
       <p>Providing the best services for our clients.</p>
+      <HeroSection />
       <Gallery /> {/* A galeria será exibida aqui */}
     </motion.div>
   );

@@ -1,15 +1,34 @@
-import { motion } from 'framer-motion';
+// src/pages/Home.js
+import React from 'react';
+import { Container, Grid, Button } from '@mui/material';
+import HeroSection from '../components/HeroSection';
+import Gallery from '../components/Gallery';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <h1>Welcome to Our Company</h1>
-      <p>Providing the best services for our clients.</p>
-    </motion.div>
+    <Container maxWidth="lg">
+      <HeroSection />
+      <Grid container spacing={4} justifyContent="center" sx={{ marginTop: '2rem' }}>
+        <Grid item>
+          <Button component={Link} to="/about" variant="contained" color="primary" sx={{ borderRadius: '20px', padding: '0.8rem 2rem' }}>
+            Learn More
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button 
+            component={Link} 
+            to="/contact" 
+            variant="outlined" 
+            color="secondary" 
+            sx={{ borderRadius: '20px', padding: '0.8rem 2rem' }}
+          >
+            Contact Us
+          </Button>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
+
 export default Home;
