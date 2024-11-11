@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from "react-router-dom";
+import logo from '../assets/almelogo.png';
 
-
-const Header = () => {
+function Header() {
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="static">
       <Toolbar>
-        <Typography 
-          variant="h6" 
-          component={Link} 
-          to="/" 
-          sx={{ flexGrow: 1, color: 'inherit', textDecoration: 'none' }}
-        >
-          {}
-          Logo
-        </Typography>
+        {/* Logo com link para a página inicial */}
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+          <img src={logo} alt="Company Logo" style={{ width: '50px', marginRight: '1rem', cursor: 'pointer' }} />
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            
+          </Typography>
+        </Link>
+        {/* Botões de navegação */}
         <Button color="inherit" component={Link} to="/">Home</Button>
+        <Button color="inherit" component={Link} to="/about">About Us</Button>
         <Button color="inherit" component={Link} to="/services">Portfolio</Button>
         <Button color="inherit" component={Link} to="/contact">Contact</Button>
-        </Toolbar>
+      </Toolbar>
     </AppBar>
   );
-};
+}
 
 export default Header;

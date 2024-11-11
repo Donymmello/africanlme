@@ -20,17 +20,17 @@ function Footer() {
       <Typography variant="body1" color="textSecondary" gutterBottom>
         Connect with us
       </Typography>
-      <Box>
-        <IconButton color="primary" href="https://www.facebook.com" target="_blank">
-          <FaFacebook />
-        </IconButton>
-        <IconButton color="primary" href="https://www.instagram.com" target="_blank">
-          <FaInstagram />
-        </IconButton>
-        <IconButton color="primary" href="https://www.linkedin.com" target="_blank">
-          <FaLinkedin />
-        </IconButton>
-      </Box>
+      <Box sx={{ textAlign: 'center', mt: 4 }}>
+      <IconButton color="primary" href="https://facebook.com">
+        <FaFacebook />
+      </IconButton>
+      <IconButton color="primary" href="https://instagram.com">
+        <FaInstagram />
+      </IconButton>
+      <IconButton color="primary" href="https://linkedin.com">
+        <FaLinkedin />
+      </IconButton>
+    </Box>
     </Box>
   );
 }

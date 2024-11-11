@@ -4,7 +4,7 @@ import { Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
 
 function Gallery() {
   const images = [
-    { src: 'image1.jpg', title: 'Image 1' },
+    { src: 'cdm.jpg', title: 'Image 1' },
     { src: 'image2.jpg', title: 'Image 2' },
     { src: 'image3.jpg', title: 'Image 3' },
   ];

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import CircularProgress from '@mui/material/CircularProgress';
 import theme from './theme';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,8 +18,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000); // Simula um carregamento de 2 segundos
+    const timer = setTimeout(() => setLoading(false), 1000); // Tempo simulado
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) return <CircularProgress color="primary" />;
 
   return (
     
@@ -32,8 +36,8 @@ function App() {
       <Header />
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
 
         </Routes>
