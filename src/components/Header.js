@@ -9,7 +9,7 @@ function Header() {
       <Toolbar>
         {/* Logo com link para a página inicial */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
-          <img src={logo} alt="Company Logo" style={{ width: '50px', marginRight: '1rem', cursor: 'pointer' }} />
+          <img src={logo} alt="Company Logo" style={{ width: '100px', marginRight: '1rem', cursor: 'pointer' }} />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             
           </Typography>

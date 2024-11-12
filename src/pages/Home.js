@@ -2,12 +2,24 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
 import team from '../assets/team.jpg';
+import inspect from '../assets/inspect.jpg';
 import mozal from '../assets/mozal.jpg';
 import cdm from '../assets/cdm.jpg';
 import cocacola from '../assets/coca cola.jpg';
 import dp from '../assets/dp w.jpg';
 import barloword from '../assets/barloword.jpg';
-import inspect from '../assets/inspect.jpg';
+import kenmare from '../assets/kenm.jpg';
+import duys from '../assets/duys.jpg';
+import grindrod from '../assets/grindrod.jpg';
+import sasol from '../assets/sasol.jpg';
+import vulcan from '../assets/vulcan.jpg';
+import ss from '../assets/ss.jpg';
+import msc from '../assets/msc.jpg';
+import bal from '../assets/bal.jpg';
+import cm from '../assets/cm.jpg';
+
+
+
 
 function Home() {
   return (
@@ -94,9 +106,13 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
+                height="250"
                 image={mozal}
                 alt="Parceiro 1"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
               />
               <CardContent>
                 <Typography variant="h6">Parceiro 1</Typography>
@@ -112,9 +128,13 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
+                height="250"
                 image={cdm}
                 alt="Parceiro 2"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
               />
               <CardContent>
                 <Typography variant="h6">Parceiro 2</Typography>
@@ -130,9 +150,13 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
+                height="250"
                 image={cocacola}
                 alt="Parceiro 3"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
               />
               <CardContent>
                 <Typography variant="h6">Parceiro 3</Typography>
@@ -148,9 +172,13 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
+                height="250"
                 image={dp}
                 alt="Parceiro 4"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
               />
               <CardContent>
                 <Typography variant="h6">Parceiro 4</Typography>
@@ -166,9 +194,13 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
+                height="250"
                 image={barloword}
                 alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
               />
               <CardContent>
                 <Typography variant="h6">Parceiro 6</Typography>
@@ -178,6 +210,205 @@ function Home() {
               </CardContent>
             </Card>
           </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={kenmare}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={duys}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={grindrod}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={sasol}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={vulcan}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={ss}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={msc}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={bal}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Card do parceiro 6 */}
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="250"
+                image={cm}
+                alt="Parceiro 6"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Parceiro 6</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Descrição do parceiro 6.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
         </Grid>
       </Grid>
     </Container>
