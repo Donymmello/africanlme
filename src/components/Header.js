@@ -3,8 +3,8 @@ import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from "react-router-dom";
 import logo from '../assets/almelogo.png';
 
-function Header() {
-  return (
+const Header = ({ toggleTheme, isDarkMode }) => ( 
+  
     <AppBar position="static">
       <Toolbar>
         {/* Logo com link para a página inicial */}
@@ -19,9 +19,10 @@ function Header() {
         <Button color="inherit" component={Link} to="/about">About Us</Button>
         <Button color="inherit" component={Link} to="/services">Portfolio</Button>
         <Button color="inherit" component={Link} to="/contact">Contact</Button>
+        <button onClick={toggleTheme}> {isDarkMode ? '' : ''}</button>
       </Toolbar>
     </AppBar>
   );
-}
+
 
 export default Header;

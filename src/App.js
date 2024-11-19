@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles';
+import CustomThemeProvider  from './ThemeProvider';
 import CssBaseline from '@mui/material/CssBaseline';
 import CircularProgress from '@mui/material/CircularProgress';
-import theme from './theme';
+import lightTheme from './theme';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
@@ -26,7 +26,7 @@ function App() {
 
   return (
     
-      <ThemeProvider theme={theme}>
+      <CustomThemeProvider>
       <CssBaseline />
       {loading ? (
         <Loading />
@@ -44,7 +44,7 @@ function App() {
         <Footer />
     </Router>
       )}
-      </ThemeProvider>
+      </CustomThemeProvider>
   );
 }
 
