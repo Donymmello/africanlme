@@ -25,7 +25,7 @@ const CustomThemeProvider = ({ children }) => {
       {children}
       {/* Este botão pode ser movido para onde desejar */}
       <button onClick={toggleTheme} style={{ position: 'absolute', top: 10, right: 10 }}>
-        Alternar para {isDarkMode ? 'Tema Claro' : 'Tema Escuro'}
+         {isDarkMode ? 'Tema Claro' : 'Tema Escuro'}
       </button>
     </ThemeProvider>
   );
