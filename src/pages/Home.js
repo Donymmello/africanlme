@@ -70,13 +70,22 @@ function Home() {
         {/* Grid para os servicos */}
         <Grid container spacing={4}>
           {/* Card do servico 1 */}
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={3}>
             <Card>
               <CardMedia
                 component="img"
-                height="140"
                 image={inspect}
                 alt="Inspection and certification:"
+                style={{
+                  width: '100%',
+                  maxWidth: '300px',
+                  height: 'auto',
+                  objectFit: 'cover',
+                }}
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
               />
               <CardContent>
                 <Typography variant="h6">Inspection and certification:</Typography>
@@ -86,7 +95,126 @@ function Home() {
               </CardContent>
             </Card>
           </Grid>
+
+          {/* Grid para os servicos */}
+          {/* Card do servico 1 */}
+          <Grid item xs={12} sm={3}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="auto"
+                image={inspect}
+                alt="Inspection and certification:"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">NDT (Nondestructive Tests):</Typography>
+                <Typography variant="body2" color="text.secondary">
+
+                  Pressure test, MPI – Magnetic Particle Testing, UT – Ultrasonic Testing, LPT – Liquid Penetrant Testing, RT – Radiographic Testing and Eddy Testing.
+
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+
+          {/* Grid para os servicos */}
+          {/* Card do servico 1 */}
+          <Grid item xs={12} sm={3}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="auto"
+                image={inspect}
+                alt="Inspection and certification:"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Industrial surveying:</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Integrity testing.                
+                  </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Grid para os servicos */}
+          {/* Card do servico 1 */}
+          <Grid item xs={12} sm={3}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="auto"
+                image={inspect}
+                alt="Inspection and certification:"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Supply:</Typography>
+                <Typography variant="body2" color="text.secondary">
+                Sourcing and supply of lifting equipment and spares.                
+                  </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Grid para os servicos */}
+          {/* Card do servico 1 */}
+          <Grid item xs={12} sm={3}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="auto"
+                image={inspect}
+                alt="Inspection and certification:"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Repair and Service:</Typography>
+                <Typography variant="body2" color="text.secondary">
+                Routine maintenance / Restoring original functional condition.                
+                  </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Grid para os servicos */}
+          {/* Card do servico 1 */}
+          <Grid item xs={12} sm={3}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="auto"
+                image={inspect}
+                alt="Inspection and certification:"
+                sx={{
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.05)' }
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">Consulting:</Typography>
+                <Typography variant="body2" color="text.secondary">
+                Expert advising on the lifting area.                
+                  </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
+
 
         {/* Título da seção de parceiros */}
         <Box sx={{ textAlign: 'center', my: 4 }}>
@@ -106,7 +234,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={mozal}
                 alt="Parceiro 1"
                 sx={{
@@ -128,7 +257,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={cdm}
                 alt="Parceiro 2"
                 sx={{
@@ -150,7 +280,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={cocacola}
                 alt="Parceiro 3"
                 sx={{
@@ -172,7 +303,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={dp}
                 alt="Parceiro 4"
                 sx={{
@@ -194,7 +326,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={barloword}
                 alt="Parceiro 6"
                 sx={{
@@ -216,7 +349,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={kenmare}
                 alt="Parceiro 6"
                 sx={{
@@ -238,7 +372,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={duys}
                 alt="Parceiro 6"
                 sx={{
@@ -260,7 +395,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={grindrod}
                 alt="Parceiro 6"
                 sx={{
@@ -282,7 +418,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={sasol}
                 alt="Parceiro 6"
                 sx={{
@@ -304,7 +441,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={vulcan}
                 alt="Parceiro 6"
                 sx={{
@@ -326,7 +464,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={ss}
                 alt="Parceiro 6"
                 sx={{
@@ -348,7 +487,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={msc}
                 alt="Parceiro 6"
                 sx={{
@@ -370,7 +510,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={bal}
                 alt="Parceiro 6"
                 sx={{
@@ -392,7 +533,8 @@ function Home() {
             <Card>
               <CardMedia
                 component="img"
-                height="250"
+                height="auto"
+                width="auto"
                 image={cm}
                 alt="Parceiro 6"
                 sx={{
