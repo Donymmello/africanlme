@@ -24,13 +24,13 @@ function Footer() {
         Connect with us
       </Typography>
       <Box sx={{ textAlign: 'center', mt: 4 }}>
-        <IconButton color="primary" href="https://facebook.com">
+        <IconButton color="primary" href="https://www.facebook.com/profile.php?id=61554284751974">
           <FaFacebook />
         </IconButton>
-        <IconButton color="primary" href="https://instagram.com">
+        <IconButton color="primary" href="https://www.instagram.com/africanlme/">
           <FaInstagram />
         </IconButton>
-        <IconButton color="primary" href="https://linkedin.com">
+        <IconButton color="primary" href="https://linkedin.com/comapny//company/african-lifting-machinery-entity/?viewAsMember=true">
           <FaLinkedin />
         </IconButton>
       </Box>

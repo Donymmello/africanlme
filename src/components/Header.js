@@ -5,7 +5,7 @@ import logo from '../assets/almelogo.png';
 
 const Header = ({ toggleTheme, isDarkMode }) => ( 
   
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         {/* Logo com link para a página inicial */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
