@@ -1,20 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import CustomThemeProvider  from './ThemeProvider';
+import CustomThemeProvider from './ThemeProvider';
 import CssBaseline from '@mui/material/CssBaseline';
 import CircularProgress from '@mui/material/CircularProgress';
-import lightTheme from './theme';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Loading from './components/Loading';
-import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import { Toolbar } from '@mui/material';
 import './index.css';
+import Cookies from 'js-cookie';
+
 
 function App() {
+  
+  const [isDarkMode, setIsDarkMode] = useState(
+    Cookies.get('theme') === 'dark'
+  );
+
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+    Cookies.set('theme', !isDarkMode ? 'dark' : 'light', { expires: 7 });
+  };
+
+  useEffect(() => {
+    setIsDarkMode(Cookies.get('theme') === 'dark');
+  }, []);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -25,26 +39,21 @@ function App() {
   if (loading) return <CircularProgress color="primary" />;
 
   return (
-    
-      <CustomThemeProvider>
+    <CustomThemeProvider isDarkMode={isDarkMode} toggleTheme={toggleTheme}>
       <CssBaseline />
-      {loading ? (
-        <Loading />
-      ) : (
-        
       <Router>
-      <Header />
-      <Routes>
+        <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode}  />
+        {/* Adiciona um espaçador para compensar o Header fixo */}
+        <Toolbar />
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
-
         </Routes>
         <Footer />
-    </Router>
-      )}
-      </CustomThemeProvider>
+      </Router>
+    </CustomThemeProvider>
   );
 }
 

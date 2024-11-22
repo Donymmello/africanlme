@@ -68,7 +68,7 @@ function Home() {
         </Box>
 
         {/* Grid para os servicos */}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} >
           {/* Card do servico 1 */}
           <Grid item xs={12} sm={3}>
             <Card>
@@ -146,6 +146,7 @@ function Home() {
           </Grid>
 
           {/* Grid para os servicos */}
+          <Grid container spacing={4}>
           {/* Card do servico 1 */}
           <Grid item xs={12} sm={3}>
             <Card>
@@ -552,6 +553,7 @@ function Home() {
           </Grid>
 
         </Grid>
+      </Grid>
       </Grid>
     </Container>
   );
