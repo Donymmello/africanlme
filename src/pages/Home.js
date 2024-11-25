@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import React from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
 import team from '../assets/team.jpg';
@@ -13,13 +12,6 @@ import duys from '../assets/duys.jpg';
 import grindrod from '../assets/grindrod.jpg';
 import sasol from '../assets/sasol.jpg';
 import vulcan from '../assets/vulcan.jpg';
-import ss from '../assets/ss.jpg';
-import msc from '../assets/msc.jpg';
-import bal from '../assets/bal.jpg';
-import cm from '../assets/cm.jpg';
-
-
-
 
 function Home() {
   return (
@@ -35,9 +27,9 @@ function Home() {
       </Box>
 
       {/* Imagem da Equipe */}
-      <Grid container spacing={4} direction="column"> {/* Configurado para coluna */}
-        <Grid item xs={12} md={6}>
-          <Card>
+      <Grid container spacing={4}>
+        <Grid item xs={12}>
+          <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
             <CardMedia
               component="img"
               height="500"
@@ -45,7 +37,7 @@ function Home() {
               alt="Equipe da empresa"
               sx={{
                 transition: 'transform 0.3s ease-in-out',
-                '&:hover': { transform: 'scale(1.05)' }
+                '&:hover': { transform: 'scale(1.05)' },
               }}
             />
             <CardContent>
@@ -56,504 +48,93 @@ function Home() {
             </CardContent>
           </Card>
         </Grid>
-
-        {/* Título da seção de servicos */}
-        <Box sx={{ textAlign: 'center', my: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            Nossos Servicos
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Trabalhamos com as melhores marcas e empresas para oferecer o melhor para nossos clientes.
-          </Typography>
-        </Box>
-
-        {/* Grid para os servicos */}
-        <Grid container spacing={4} >
-          {/* Card do servico 1 */}
-          <Grid item xs={12} sm={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image={inspect}
-                alt="Inspection and certification:"
-                style={{
-                  width: '100%',
-                  maxWidth: '300px',
-                  height: 'auto',
-                  objectFit: 'cover',
-                }}
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Inspection and certification:</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Testing of lifting equipment performed correctly based on worldwide standards, followed by a formal accredited accordance document.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Grid para os servicos */}
-          {/* Card do servico 1 */}
-          <Grid item xs={12} sm={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                image={inspect}
-                alt="Inspection and certification:"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">NDT (Nondestructive Tests):</Typography>
-                <Typography variant="body2" color="text.secondary">
-
-                  Pressure test, MPI – Magnetic Particle Testing, UT – Ultrasonic Testing, LPT – Liquid Penetrant Testing, RT – Radiographic Testing and Eddy Testing.
-
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-
-          {/* Grid para os servicos */}
-          {/* Card do servico 1 */}
-          <Grid item xs={12} sm={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                image={inspect}
-                alt="Inspection and certification:"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Industrial surveying:</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Integrity testing.                
-                  </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Grid para os servicos */}
-          <Grid container spacing={4}>
-          {/* Card do servico 1 */}
-          <Grid item xs={12} sm={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                image={inspect}
-                alt="Inspection and certification:"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Supply:</Typography>
-                <Typography variant="body2" color="text.secondary">
-                Sourcing and supply of lifting equipment and spares.                
-                  </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Grid para os servicos */}
-          {/* Card do servico 1 */}
-          <Grid item xs={12} sm={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                image={inspect}
-                alt="Inspection and certification:"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Repair and Service:</Typography>
-                <Typography variant="body2" color="text.secondary">
-                Routine maintenance / Restoring original functional condition.                
-                  </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Grid para os servicos */}
-          {/* Card do servico 1 */}
-          <Grid item xs={12} sm={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                image={inspect}
-                alt="Inspection and certification:"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Consulting:</Typography>
-                <Typography variant="body2" color="text.secondary">
-                Expert advising on the lifting area.                
-                  </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-
-
-        {/* Título da seção de parceiros */}
-        <Box sx={{ textAlign: 'center', my: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            Nossos Parceiros
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Trabalhamos com as melhores marcas e empresas para oferecer o melhor para nossos clientes.
-          </Typography>
-        </Box>
-
-
-        {/* Grid para os parceiros */}
-        <Grid container spacing={4}>
-          {/* Card do parceiro 1 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={mozal}
-                alt="Parceiro 1"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 1</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 1.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 2 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={cdm}
-                alt="Parceiro 2"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 2</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 2.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 3 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={cocacola}
-                alt="Parceiro 3"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 3</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 3.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 4 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={dp}
-                alt="Parceiro 4"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 4</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 4.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={barloword}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={kenmare}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={duys}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={grindrod}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={sasol}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={vulcan}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={ss}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={msc}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={bal}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Card do parceiro 6 */}
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="auto"
-                width="auto"
-                image={cm}
-                alt="Parceiro 6"
-                sx={{
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': { transform: 'scale(1.05)' }
-                }}
-              />
-              <CardContent>
-                <Typography variant="h6">Parceiro 6</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Descrição do parceiro 6.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-        </Grid>
       </Grid>
+
+      {/* Seção de Serviços */}
+      <Box sx={{ textAlign: 'center', my: 4 }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Nossos Serviços
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Trabalhamos com as melhores marcas e empresas para oferecer o melhor para nossos clientes.
+        </Typography>
+      </Box>
+      <Grid container spacing={4}>
+        {[ // Adicionando serviços em um array
+          { title: 'Inspection and Certification', desc: 'Testing of lifting equipment...', img: inspect },
+          { title: 'NDT (Nondestructive Tests)', desc: 'Pressure test, MPI...', img: inspect },
+          { title: 'Industrial Surveying', desc: 'Integrity testing...', img: inspect },
+          { title: 'Supply', desc: 'Sourcing and supply...', img: inspect },
+          { title: 'Repair and Service', desc: 'Routine maintenance...', img: inspect },
+          { title: 'Consulting', desc: 'Expert advising...', img: inspect },
+        ].map((service, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
+              <CardMedia
+                component="img"
+                height="400"
+                image={service.img}
+                alt={service.title}
+                sx={{
+                  objectFit: 'cover',
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.1)' },
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">{service.title}</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {service.desc}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+
+      {/* Seção de Parceiros */}
+      <Box sx={{ textAlign: 'center', my: 4 }}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Nossos Parceiros
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Trabalhamos com as melhores marcas e empresas para oferecer o melhor para nossos clientes.
+        </Typography>
+      </Box>
+      <Grid container spacing={4}>
+        {[ // Adicionando parceiros em um array
+          { name: 'Mozal', img: mozal },
+          { name: 'CDM', img: cdm },
+          { name: 'Coca Cola', img: cocacola },
+          { name: 'DP World', img: dp },
+          { name: 'Barloworld', img: barloword },
+          { name: 'Kenmare', img: kenmare },
+          { name: 'Duys', img: duys },
+          { name: 'Grindrod', img: grindrod },
+          { name: 'Sasol', img: sasol },
+          { name: 'Vulcan', img: vulcan },
+        ].map((partner, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
+              <CardMedia
+                component="img"
+                height="150"
+                image={partner.img}
+                alt={partner.name}
+                sx={{
+                  objectFit: 'contain',
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.1)' },
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6" align="center">
+                  {partner.name}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
