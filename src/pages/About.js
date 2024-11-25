@@ -25,66 +25,35 @@ function About() {
         </Typography>
       </Box>
 
-      {/* Grid para os servicos */}
       <Grid container spacing={4}>
-        {/* Card do servico 1 */}
-        <Grid item xs={12} sm={4}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="400"
-              image={mission}
-              alt="Mission:"
-            />
-            <CardContent>
-              <Typography variant="h6">Mission:</Typography>
-              <Typography variant="body2" color="text.secondary">
-                To uphold the principals and ethics of good inspectorate services and engineering code of conduct at all times in providing a quality and reliable service;
-                Continually strive for quality in the services it provides to support its customers in their efforts to achieve high productivity by means of reduced maintenance cost.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Grid para os servicos */}
-        {/* Card do servico 1 */}
-        <Grid item xs={12} sm={4}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="400"
-              image={values}
-              alt="Values:"
-            />
-            <CardContent>
-              <Typography variant="h6">Values:</Typography>
-              <Typography variant="body2" color="text.secondary">
-                We are committed to providing our clients with state of the art solutions, to meet their objectives within the budget, time and quality framework of their requirements.
-                We will meet all our obligations to our clients and employees by our exemplary approach to our work and our environment.
-                Whether you own or operate lifting machinery, you need to ensure that they are safe, and in compliance with statutory requirements. That is where our inspection and identify can help.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Grid para os servicos */}
-        {/* Card do servico 1 */}
-        <Grid item xs={12} sm={4}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="400"
-              image={vision}
-              alt="Vision:"
-            />
-            <CardContent>
-              <Typography variant="h6">Vision:</Typography>
-              <Typography variant="body2" color="text.secondary">
-                African LME will be leaders in Africa by providing a holistic, innovative, and exemplary Engineering & Management Services to National & International Clients across all Industries.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        {[ // Adicionando serviços em um array
+          { title: 'Mission', desc: 'To uphold the principals and ethics of good inspectorate services ...', img: mission },
+          { title: 'Vision', desc: 'African LME will be leaders in Africa by providing a holistic...', img: vision },
+          { title: 'Values', desc: 'We are committed to providing our clients with state of the art solutions...', img: values },
+      
+        ].map((service, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
+              <CardMedia
+                component="img"
+                height="400"
+                image={service.img}
+                alt={service.title}
+                sx={{
+                  objectFit: 'cover',
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.1)' },
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">{service.title}</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {service.desc}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );

@@ -1,7 +1,12 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
 import team from '../assets/team.jpg';
-import inspect from '../assets/inspect.jpg';
+import inspect from '../assets/inspect.png';
+import ndt from '../assets/ndt.png';
+import survey from '../assets/survey.png';
+import supply from '../assets/supply.png';
+import repair from '../assets/repair.png';
+import consulting from '../assets/consulting.png';
 import mozal from '../assets/mozal.jpg';
 import cdm from '../assets/cdm.jpg';
 import cocacola from '../assets/coca cola.jpg';
@@ -62,21 +67,21 @@ function Home() {
       <Grid container spacing={4}>
         {[ // Adicionando serviços em um array
           { title: 'Inspection and Certification', desc: 'Testing of lifting equipment...', img: inspect },
-          { title: 'NDT (Nondestructive Tests)', desc: 'Pressure test, MPI...', img: inspect },
-          { title: 'Industrial Surveying', desc: 'Integrity testing...', img: inspect },
-          { title: 'Supply', desc: 'Sourcing and supply...', img: inspect },
-          { title: 'Repair and Service', desc: 'Routine maintenance...', img: inspect },
-          { title: 'Consulting', desc: 'Expert advising...', img: inspect },
+          { title: 'NDT (Nondestructive Tests)', desc: 'Pressure test, MPI...', img: ndt },
+          { title: 'Industrial Surveying', desc: 'Integrity testing...', img: survey },
+          { title: 'Supply', desc: 'Sourcing and supply...', img: supply },
+          { title: 'Repair and Service', desc: 'Routine maintenance...', img: repair },
+          { title: 'Consulting', desc: 'Expert advising...', img: consulting },
         ].map((service, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
               <CardMedia
                 component="img"
-                height="400"
+                height="150"
                 image={service.img}
                 alt={service.title}
                 sx={{
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                   transition: 'transform 0.3s ease-in-out',
                   '&:hover': { transform: 'scale(1.1)' },
                 }}

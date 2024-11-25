@@ -18,89 +18,35 @@ function Services() {
         </Typography>
       </Box>
 
-      {/* Grid para os serviços */}
       <Grid container spacing={4}>
-        {/* Card do serviço 1 */}
-        <Grid item xs={12} sm={6}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <CardMedia
-              component="img"
-              image={service1}
-              alt="Inspection and certification"
-              style={{
-                width: '100%',
-                maxWidth: '300px',
-                height: 'auto',
-                objectFit: 'cover',
-              }}
-              sx={{
-                transition: 'transform 0.3s ease-in-out',
-                '&:hover': { transform: 'scale(1.05)' },
-              }}
-            />
-            <CardContent>
-              <Typography variant="h6">Inspection and Certification</Typography>
-              <Typography variant="body2" color="text.secondary">
-                Testing of lifting equipment performed correctly based on worldwide standards, followed by a formal accredited accordance document.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Card do serviço 2 */}
-        <Grid item xs={12} sm={6}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <CardMedia
-              component="img"
-              image={service2}
-              alt="Parceiro 2"
-              style={{
-                width: '100%',
-                maxWidth: '300px',
-                height: 'auto',
-                objectFit: 'cover',
-              }}
-              sx={{
-                transition: 'transform 0.3s ease-in-out',
-                '&:hover': { transform: 'scale(1.05)' },
-              }}
-            />
-            <CardContent>
-              <Typography variant="h6">Parceiro 2</Typography>
-              <Typography variant="body2" color="text.secondary">
-                Descrição do parceiro 2.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Card do serviço 3 */}
-        <Grid item xs={12} sm={6}>
-          <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <CardMedia
-              component="img"
-              image={service3}
-              alt="Service 3"
-              style={{
-                width: '100%',
-                maxWidth: '300px',
-                height: 'auto',
-                objectFit: 'cover',
-              }}
-              sx={{
-                transition: 'transform 0.3s ease-in-out',
-                '&:hover': { transform: 'scale(1.05)' },
-              }}
-            />
-            <CardContent>
-              <Typography variant="h6">Service 3</Typography>
-              <Typography variant="body2" color="text.secondary">
-                Descrição do serviço 3.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
+        {[ // Adicionando serviços em um array
+          { title: 'Inspection and Certification', desc: 'Testing of lifting equipment...', img: service1 },
+          { title: 'NDT (Nondestructive Tests)', desc: 'Pressure test, MPI...', img: service2 },
+          { title: 'Industrial Surveying', desc: 'Integrity testing...', img: service3 },
+      
+        ].map((service, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
+              <CardMedia
+                component="img"
+                height="400"
+                image={service.img}
+                alt={service.title}
+                sx={{
+                  objectFit: 'cover',
+                  transition: 'transform 0.3s ease-in-out',
+                  '&:hover': { transform: 'scale(1.1)' },
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6">{service.title}</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {service.desc}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
